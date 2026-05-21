@@ -20,15 +20,12 @@
     --google: #ea4335;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { background: var(--bg); color: var(--text); font-family: 'Inter', system-ui, sans-serif; padding: 32px 24px; min-height: 100vh; max-width: 960px; margin: 0 auto; }
+  body { background: var(--bg); color: var(--text); font-family: 'Inter', system-ui, sans-serif; padding: 32px 24px; min-height: 100vh; max-width: 980px; margin: 0 auto; }
 
-  /* Header */
   .header { text-align: center; margin-bottom: 32px; }
   .header h1 { font-size: 24px; font-weight: 700; letter-spacing: -0.5px; }
   .header p { color: var(--muted); font-size: 13px; margin-top: 6px; }
-  .badge { display: inline-block; background: var(--card2); border: 1px solid var(--border); border-radius: 20px; padding: 4px 14px; font-size: 11px; color: var(--muted); margin-top: 10px; }
 
-  /* Link Meta */
   .meta-link-bar { background: linear-gradient(135deg, #0f1e3d, #1a1d27); border: 1px solid rgba(24,119,242,0.3); border-radius: 12px; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; margin-bottom: 28px; }
   .meta-link-bar-left { display: flex; align-items: center; gap: 10px; }
   .meta-link-icon { width: 30px; height: 30px; background: rgba(24,119,242,0.15); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 12px; color: var(--meta); }
@@ -37,12 +34,10 @@
   .btn-meta { background: var(--meta); color: #fff; border: none; border-radius: 8px; padding: 8px 16px; font-size: 12px; font-weight: 600; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
   .btn-meta:hover { opacity: 0.85; }
 
-  /* Tabs */
   .tabs { display: flex; gap: 4px; margin-bottom: 24px; background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 4px; width: fit-content; }
   .tab { padding: 8px 18px; border-radius: 7px; font-size: 13px; font-weight: 600; cursor: pointer; color: var(--muted); transition: all 0.15s; border: none; background: none; }
   .tab.active { background: var(--card2); color: var(--text); }
 
-  /* KPI grid */
   .kpi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 24px; }
   .kpi { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
   .kpi.hl { border-color: var(--blue); background: linear-gradient(135deg, #1a1d27, #1e2740); }
@@ -53,7 +48,6 @@
   .c-green { color: var(--green); }
   .c-orange { color: var(--orange); }
 
-  /* Canal cards */
   .canal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 24px; }
   .canal-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
   .canal-card.meta { border-top: 3px solid var(--meta); }
@@ -69,17 +63,16 @@
   .cs-val { font-size: 18px; font-weight: 700; }
   .cs-lbl { font-size: 9px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px; }
 
-  /* Section */
   .sec-title { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
   .sec-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
 
-  /* Table */
   .tw { background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-bottom: 16px; }
   .th { padding: 14px 18px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
   .th-title { font-size: 13px; font-weight: 600; }
   .tag { font-size: 10px; padding: 2px 8px; border-radius: 8px; font-weight: 600; }
   .tag-m { background: rgba(24,119,242,0.15); color: var(--meta); }
   .tag-g { background: rgba(234,67,53,0.15); color: var(--google); }
+  .tag-x { background: rgba(136,146,164,0.15); color: var(--muted); }
   table { width: 100%; border-collapse: collapse; }
   th { padding: 9px 16px; text-align: left; font-size: 10px; text-transform: uppercase; letter-spacing: 0.6px; color: var(--muted); font-weight: 600; border-bottom: 1px solid var(--border); background: rgba(255,255,255,0.02); }
   td { padding: 11px 16px; font-size: 13px; border-bottom: 1px solid rgba(42,47,69,0.4); vertical-align: middle; }
@@ -94,8 +87,8 @@
   .da { background: var(--green); }
   .di { background: var(--muted); }
   .dp { background: var(--orange); }
+  .xrow td { opacity: 0.5; font-style: italic; }
 
-  /* Tabs content */
   .tab-content { display: none; }
   .tab-content.active { display: block; }
 
@@ -109,10 +102,9 @@
 
 <div class="header">
   <h1>Relatório de Performance — Clínica</h1>
-  <p>Dr. Danilo Matsunaga · Campanhas de Consulta</p>
+  <p>Dr. Danilo Matsunaga · Campanhas de Consulta · Meta Ads + Google Ads</p>
 </div>
 
-<!-- Link fixo Meta Ads -->
 <div class="meta-link-bar">
   <div class="meta-link-bar-left">
     <div class="meta-link-icon">f</div>
@@ -126,37 +118,71 @@
   </a>
 </div>
 
-<!-- Tabs -->
 <div class="tabs">
-  <button class="tab active" onclick="switchTab('maio')">Maio 2026</button>
-  <button class="tab" onclick="switchTab('historico')">Histórico</button>
+  <button class="tab active" onclick="switchTab('maio', this)">Maio 2026</button>
+  <button class="tab" onclick="switchTab('historico', this)">Histórico</button>
 </div>
 
 <!-- ===== MAIO 2026 ===== -->
 <div id="tab-maio" class="tab-content active">
 
+  <!-- KPIs combinados -->
   <div class="kpi-grid">
     <div class="kpi hl">
-      <div class="kpi-lbl">Total Investido — Maio</div>
-      <div class="kpi-val c-blue">R$ 7.793</div>
-      <div class="kpi-sub">Somente campanhas CONS · 01–21 mai</div>
+      <div class="kpi-lbl">Total Investido — Clínica</div>
+      <div class="kpi-val c-blue">R$ 9.979</div>
+      <div class="kpi-sub">Meta R$7.794 + Google R$2.186 · 01–21 mai</div>
     </div>
     <div class="kpi">
-      <div class="kpi-lbl">Conversas Geradas</div>
-      <div class="kpi-val c-green">327</div>
-      <div class="kpi-sub">204 (Cazimi) + 120 (WPP) + 3 (Insta)</div>
+      <div class="kpi-lbl">Contatos Gerados</div>
+      <div class="kpi-val c-green">427</div>
+      <div class="kpi-sub">Meta 327 conversas + Google 100 leads</div>
     </div>
     <div class="kpi">
-      <div class="kpi-lbl">CPL Diluído</div>
-      <div class="kpi-val c-orange">R$ 23,83</div>
-      <div class="kpi-sub">Topo + meio + fundo ÷ conversas</div>
+      <div class="kpi-lbl">CPL Combinado</div>
+      <div class="kpi-val c-orange">R$ 23,37</div>
+      <div class="kpi-sub">Total clínica ÷ total contatos</div>
     </div>
   </div>
 
-  <div class="sec-title">Meta Ads — Maio 2026</div>
+  <!-- Canal cards -->
+  <div class="sec-title">Por canal</div>
+  <div class="canal-grid">
+    <div class="canal-card meta">
+      <div class="canal-head">
+        <div class="canal-ico meta">f</div>
+        <div>
+          <div class="canal-name">Meta Ads</div>
+          <div class="canal-period">01–21 mai 2026</div>
+        </div>
+      </div>
+      <div class="canal-stats">
+        <div class="cs"><div class="cs-val c-blue">R$ 7.794</div><div class="cs-lbl">Investido</div></div>
+        <div class="cs"><div class="cs-val c-green">327</div><div class="cs-lbl">Conversas</div></div>
+        <div class="cs"><div class="cs-val c-orange">R$ 23,83</div><div class="cs-lbl">CPL</div></div>
+      </div>
+    </div>
+    <div class="canal-card google">
+      <div class="canal-head">
+        <div class="canal-ico google">G</div>
+        <div>
+          <div class="canal-name">Google Ads</div>
+          <div class="canal-period">01–21 mai 2026</div>
+        </div>
+      </div>
+      <div class="canal-stats">
+        <div class="cs"><div class="cs-val c-blue">R$ 2.186</div><div class="cs-lbl">Investido</div></div>
+        <div class="cs"><div class="cs-val c-green">100</div><div class="cs-lbl">Leads</div></div>
+        <div class="cs"><div class="cs-val vp">R$ 21,86</div><div class="cs-lbl">CPL</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Meta Ads — Clínica -->
+  <div class="sec-title">Meta Ads — Funil Clínica</div>
   <div class="tw">
     <div class="th">
-      <span class="th-title">Funil Cazimi — campanhas ativas</span>
+      <span class="th-title">Funil Cazimi — campanhas consulta</span>
       <span class="tag tag-m">01–21 mai 2026</span>
     </div>
     <table>
@@ -165,7 +191,7 @@
       </thead>
       <tbody>
         <tr>
-          <td class="nc">CONS [CAZIMI] Teste de Criativos<small>Mensagens diretas — ABO</small></td>
+          <td class="nc">CONS [CAZIMI] Teste de Criativos<small>Mensagens diretas — ABO · CBO</small></td>
           <td>Fundo</td>
           <td><span class="dot da"></span>Ativo</td>
           <td>R$ 4.598,38</td>
@@ -181,7 +207,7 @@
           <td class="vp">R$ 7,83</td>
         </tr>
         <tr>
-          <td class="nc">CAZIMI Funil Visitas ao Instagram<small>Aquecimento</small></td>
+          <td class="nc">CAZIMI Funil Visitas ao Instagram<small>Aquecimento de público</small></td>
           <td>Meio</td>
           <td><span class="dot di"></span>Inativo</td>
           <td>R$ 1.021,23</td>
@@ -189,15 +215,15 @@
           <td class="vn">R$ 340,41</td>
         </tr>
         <tr>
-          <td class="nc">CONS Tráfego pro site<small>Meio de funil — LPVs</small></td>
+          <td class="nc">CONS Tráfego pro site<small>Meio de funil — Landing Page Views</small></td>
           <td>Meio</td>
           <td><span class="dot da"></span>Ativo</td>
           <td>R$ 419,07</td>
-          <td>1.543 visitas</td>
+          <td>1.543 visitas LP</td>
           <td>—</td>
         </tr>
         <tr>
-          <td class="nc">CONS Engajamento<small>Topo de funil — ThruPlays</small></td>
+          <td class="nc">CONS Engajamento<small>Topo de funil — ThruPlay Views</small></td>
           <td>Topo</td>
           <td><span class="dot da"></span>Ativo</td>
           <td>R$ 814,92</td>
@@ -205,7 +231,7 @@
           <td>—</td>
         </tr>
         <tr class="tr">
-          <td colspan="3"><strong>TOTAL META — MAIO</strong></td>
+          <td colspan="3"><strong>TOTAL META — CONSULTA</strong></td>
           <td><strong>R$ 7.793,55</strong></td>
           <td><strong>327 conversas</strong></td>
           <td><strong class="vm">R$ 23,83</strong></td>
@@ -214,10 +240,157 @@
     </table>
   </div>
 
-  <div style="background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:14px 18px;font-size:12px;color:var(--muted);">
-    <strong style="color:var(--text)">Infoproduto (excluído):</strong> INFO Destrave 14D R$1.345 + VSL Destrave R$707 + Reposição Hormonal R$852 + Emagrecimento R$701 = <strong style="color:var(--text)">R$ 3.605</strong>
-    &nbsp;·&nbsp; <strong style="color:var(--text)">Total conta maio: R$ 11.399</strong>
+  <!-- Meta Ads — Infoproduto -->
+  <div class="tw">
+    <div class="th">
+      <span class="th-title">Infoproduto (excluído dos KPIs da clínica)</span>
+      <span class="tag tag-x">01–21 mai 2026</span>
+    </div>
+    <table>
+      <thead>
+        <tr><th>Campanha</th><th>Objetivo</th><th>Status</th><th>Investido</th><th>Resultado</th><th>CPL/CPA</th></tr>
+      </thead>
+      <tbody>
+        <tr class="xrow">
+          <td class="nc">INFO [SALES] Destrave 14D<small>CBO Purchase · 40+ · 12mai</small></td>
+          <td>Compra</td>
+          <td><span class="dot da"></span>Ativo</td>
+          <td>R$ 1.345,01</td>
+          <td>14 compras</td>
+          <td>R$ 96,07</td>
+        </tr>
+        <tr class="xrow">
+          <td class="nc">[VSL] INFO [SALES] Destrave 14D — Cópia<small>CBO Purchase · 40+ · 12mai</small></td>
+          <td>Compra</td>
+          <td><span class="dot da"></span>Ativo</td>
+          <td>R$ 707,37</td>
+          <td>7 compras</td>
+          <td>R$ 101,05</td>
+        </tr>
+        <tr class="xrow">
+          <td class="nc">Reposição Hormonal<small>Conversão · CBO</small></td>
+          <td>Checkout</td>
+          <td><span class="dot di"></span>Inativo</td>
+          <td>R$ 852,23</td>
+          <td>101 checkouts</td>
+          <td>R$ 8,44</td>
+        </tr>
+        <tr class="xrow">
+          <td class="nc">Dr. Danilo | Emagrecimento<small>Teste Criativos · Mai26</small></td>
+          <td>Checkout</td>
+          <td><span class="dot di"></span>Inativo</td>
+          <td>R$ 701,18</td>
+          <td>65 checkouts</td>
+          <td>R$ 10,79</td>
+        </tr>
+        <tr class="tr">
+          <td colspan="3"><strong>SUBTOTAL INFOPRODUTO</strong></td>
+          <td><strong>R$ 3.605,79</strong></td>
+          <td><strong>—</strong></td>
+          <td><strong>—</strong></td>
+        </tr>
+      </tbody>
+    </table>
   </div>
+
+  <div style="background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:12px 18px;font-size:12px;color:var(--muted);margin-bottom:24px;">
+    <strong style="color:var(--text)">Total conta Meta — maio:</strong> Clínica R$7.794 + Infoproduto R$3.606 = <strong style="color:var(--text)">R$ 11.399</strong>
+  </div>
+
+  <!-- Google Ads -->
+  <div class="sec-title">Google Ads — Search por cidade</div>
+  <div class="tw">
+    <div class="th">
+      <span class="th-title">Campanhas Search — Consultas Dr. Danilo</span>
+      <span class="tag tag-g">01–21 mai 2026</span>
+    </div>
+    <table>
+      <thead>
+        <tr><th>Campanha</th><th>Status</th><th>Orçamento/dia</th><th>Investido</th><th>Leads</th><th>Taxa conv.</th><th>CPC méd.</th><th>CPL</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="nc">Dr. Danilo | São Paulo<small>Maximizar conversões</small></td>
+          <td><span class="dot da"></span>Ativo</td>
+          <td>R$ 55,00</td>
+          <td>R$ 931,92</td>
+          <td>78</td>
+          <td>19,60%</td>
+          <td>R$ 2,34</td>
+          <td class="vp">R$ 11,95</td>
+        </tr>
+        <tr>
+          <td class="nc">Dr. Danilo | Campinas<small>Maximizar conversões</small></td>
+          <td><span class="dot da"></span>Ativo</td>
+          <td>R$ 30,00</td>
+          <td>R$ 540,95</td>
+          <td>10</td>
+          <td>11,90%</td>
+          <td>R$ 6,44</td>
+          <td class="vm">R$ 54,10</td>
+        </tr>
+        <tr>
+          <td class="nc">Dr. Danilo | Goiânia<small>Maximizar conversões</small></td>
+          <td><span class="dot da"></span>Ativo</td>
+          <td>R$ 25,00</td>
+          <td>R$ 420,97</td>
+          <td>8</td>
+          <td>15,09%</td>
+          <td>R$ 7,94</td>
+          <td class="vm">R$ 52,62</td>
+        </tr>
+        <tr>
+          <td class="nc">Dr. Danilo | Piracicaba<small>Maximizar conversões</small></td>
+          <td><span class="dot da"></span>Ativo</td>
+          <td>R$ 15,00</td>
+          <td>R$ 280,05</td>
+          <td>4</td>
+          <td>7,69%</td>
+          <td>R$ 5,39</td>
+          <td class="vn">R$ 70,01</td>
+        </tr>
+        <tr>
+          <td class="nc">Dr. Danilo | São Paulo #2<small>Maximizar cliques · sem conversões</small></td>
+          <td><span class="dot da"></span>Ativo</td>
+          <td>R$ 55,00</td>
+          <td>R$ 11,79</td>
+          <td>0</td>
+          <td>0,00%</td>
+          <td>R$ 11,79</td>
+          <td class="vn">—</td>
+        </tr>
+        <tr>
+          <td class="nc">Dr. Danilo | Goiânia #2<small>Maximizar cliques · sem veiculação</small></td>
+          <td><span class="dot da"></span>Ativo</td>
+          <td>R$ 25,00</td>
+          <td>R$ 0,00</td>
+          <td>0</td>
+          <td>—</td>
+          <td>—</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td class="nc">Dr. Danilo | Piracicaba #2<small>Maximizar cliques · sem veiculação</small></td>
+          <td><span class="dot da"></span>Ativo</td>
+          <td>R$ 15,00</td>
+          <td>R$ 0,00</td>
+          <td>0</td>
+          <td>—</td>
+          <td>—</td>
+          <td>—</td>
+        </tr>
+        <tr class="tr">
+          <td colspan="3"><strong>TOTAL GOOGLE ADS</strong></td>
+          <td><strong>R$ 2.185,68</strong></td>
+          <td><strong>100</strong></td>
+          <td><strong>16,87%</strong></td>
+          <td><strong>R$ 3,49</strong></td>
+          <td><strong class="vp">R$ 21,86</strong></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
 </div>
 
 <!-- ===== HISTÓRICO ===== -->
@@ -262,7 +435,7 @@
         <div class="canal-ico google">G</div>
         <div>
           <div class="canal-name">Google Ads</div>
-          <div class="canal-period">4 jun 2025 – 21 mai 2026</div>
+          <div class="canal-period">01–21 mai 2026</div>
         </div>
       </div>
       <div class="canal-stats">
@@ -337,32 +510,32 @@
   <div class="tw">
     <div class="th">
       <span class="th-title">Search — Consultas por cidade</span>
-      <span class="tag tag-g">jun 2025 – mai 2026</span>
+      <span class="tag tag-g">mai 2026</span>
     </div>
     <table>
       <thead><tr><th>Campanha</th><th>Status</th><th>Investido</th><th>Leads</th><th>Taxa conv.</th><th>CPL</th></tr></thead>
       <tbody>
-        <tr><td>Dr. Danilo — São Paulo</td><td><span class="dot da"></span>Ativo</td><td>R$ 931,92</td><td>78</td><td>19,6%</td><td class="vp">R$ 11,95</td></tr>
-        <tr><td>Dr. Danilo — Campinas</td><td><span class="dot da"></span>Ativo</td><td>R$ 540,95</td><td>10</td><td>11,9%</td><td class="vm">R$ 54,10</td></tr>
-        <tr><td>Dr. Danilo — Goiânia</td><td><span class="dot da"></span>Ativo</td><td>R$ 420,97</td><td>8</td><td>15,1%</td><td class="vm">R$ 52,62</td></tr>
-        <tr><td>Dr. Danilo — Piracicaba</td><td><span class="dot da"></span>Ativo</td><td>R$ 275,54</td><td>4</td><td>7,8%</td><td class="vn">R$ 68,88</td></tr>
-        <tr><td>Campanhas #2 (inativas)</td><td><span class="dot di"></span>Inativas</td><td>R$ 11,79</td><td>0</td><td>—</td><td>—</td></tr>
-        <tr class="tr"><td><strong>TOTAL GOOGLE ADS</strong></td><td></td><td><strong>R$ 2.181,17</strong></td><td><strong>100</strong></td><td><strong>17,0%</strong></td><td><strong class="vp">R$ 21,81</strong></td></tr>
+        <tr><td>Dr. Danilo | São Paulo</td><td><span class="dot da"></span>Ativo</td><td>R$ 931,92</td><td>78</td><td>19,6%</td><td class="vp">R$ 11,95</td></tr>
+        <tr><td>Dr. Danilo | Campinas</td><td><span class="dot da"></span>Ativo</td><td>R$ 540,95</td><td>10</td><td>11,9%</td><td class="vm">R$ 54,10</td></tr>
+        <tr><td>Dr. Danilo | Goiânia</td><td><span class="dot da"></span>Ativo</td><td>R$ 420,97</td><td>8</td><td>15,1%</td><td class="vm">R$ 52,62</td></tr>
+        <tr><td>Dr. Danilo | Piracicaba</td><td><span class="dot da"></span>Ativo</td><td>R$ 280,05</td><td>4</td><td>7,7%</td><td class="vn">R$ 70,01</td></tr>
+        <tr><td>São Paulo #2 / Goiânia #2 / Piracicaba #2</td><td><span class="dot da"></span>Ativo</td><td>R$ 11,79</td><td>0</td><td>—</td><td>—</td></tr>
+        <tr class="tr"><td><strong>TOTAL GOOGLE ADS</strong></td><td></td><td><strong>R$ 2.185,68</strong></td><td><strong>100</strong></td><td><strong>17,0%</strong></td><td><strong class="vp">R$ 21,86</strong></td></tr>
       </tbody>
     </table>
   </div>
 </div>
 
 <div style="text-align:center;color:var(--muted);font-size:11px;margin-top:36px;padding-top:18px;border-top:1px solid var(--border);">
-  Atualizado em 21/05/2026 · Dr. Danilo Matsunaga · Exclui infoproduto (Destrave 14D, Reposição Hormonal)
+  Atualizado em 21/05/2026 · Dr. Danilo Matsunaga · Google Ads extraído ao vivo da conta 153-980-5523
 </div>
 
 <script>
-  function switchTab(name) {
+  function switchTab(name, btn) {
     document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
     document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
-    document.querySelector('#tab-' + name).classList.add('active');
-    event.target.classList.add('active');
+    document.getElementById('tab-' + name).classList.add('active');
+    btn.classList.add('active');
   }
 </script>
 </body>
